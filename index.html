@@ -1,0 +1,114 @@
+
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#111;background:#fff;line-height:1.6;font-size:14px;}
+  a{color:#2B5AA0;text-decoration:none;}
+  nav{background:rgba(255,255,255,0.97);border-bottom:1px solid #ddd;padding:0 1rem;}
+  .nav-inner{max-width:860px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:44px;}
+  .nav-logo{font-weight:700;font-size:0.9rem;color:#1a2e5a;}
+  .nav-links{display:flex;gap:1rem;}
+  .nav-links a{font-size:0.8rem;color:#555;font-weight:500;}
+  .hero{background:linear-gradient(135deg,#f0f4ff 0%,#e8f5f0 100%);padding:2rem 1rem 1.5rem;}
+  .hero-tag{display:inline-block;background:#e8f0fa;color:#2B5AA0;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:3px 10px;border-radius:20px;margin-bottom:0.8rem;}
+  .hero h1{font-size:1.7rem;font-weight:800;color:#1a2e5a;line-height:1.15;}
+  .hero .sub{font-size:0.82rem;color:#555;margin:0.6rem 0 1rem;max-width:520px;}
+  .stats{display:flex;gap:1.2rem;flex-wrap:wrap;margin-bottom:1rem;}
+  .stat .num{font-size:1.2rem;font-weight:800;color:#1a2e5a;}
+  .stat .lbl{font-size:0.68rem;color:#555;}
+  .btns{display:flex;gap:0.5rem;flex-wrap:wrap;}
+  .btn{display:inline-flex;align-items:center;padding:7px 14px;border-radius:7px;font-size:0.78rem;font-weight:600;cursor:pointer;text-decoration:none;}
+  .btn-p{background:#1a2e5a;color:#fff;}
+  .btn-o{border:1.5px solid #ddd;color:#111;background:#fff;}
+  section{padding:1.5rem 1rem;}
+  .sec-label{font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#2B5AA0;margin-bottom:0.3rem;}
+  h2{font-size:1.2rem;font-weight:800;color:#1a2e5a;margin-bottom:1rem;}
+  .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.6rem;}
+  .skill-card{background:#fff;border-radius:8px;padding:0.8rem;border:1px solid #ddd;}
+  .skill-card h3{font-size:0.72rem;font-weight:700;color:#1a2e5a;margin-bottom:0.4rem;}
+  .tags{display:flex;flex-wrap:wrap;gap:4px;}
+  .tag{font-size:0.65rem;background:#e8f0fa;color:#1a2e5a;padding:2px 7px;border-radius:20px;font-weight:500;}
+  .tag.t{background:#e1f5ee;color:#0f6e56;}
+  .proj-card{border:1px solid #ddd;border-radius:8px;padding:1rem;margin-bottom:0.8rem;position:relative;overflow:hidden;}
+  .proj-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:#1a2e5a;}
+  .proj-card.teal::before{background:#0f6e56;}
+  .proj-card h3{font-size:0.88rem;font-weight:700;color:#1a2e5a;margin-bottom:0.3rem;}
+  .proj-card p{font-size:0.76rem;color:#555;margin-bottom:0.5rem;}
+  .badges{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:0.5rem;}
+  .badge{font-size:0.65rem;padding:2px 7px;border-radius:20px;background:#f5f5f5;color:#555;border:1px solid #ddd;}
+  .impact{display:flex;gap:1rem;padding-top:0.5rem;border-top:1px solid #eee;}
+  .imp .num{font-size:1rem;font-weight:800;color:#1a2e5a;}
+  .imp .lbl{font-size:0.65rem;color:#555;}
+  .contact-section{background:#1a2e5a;padding:1.5rem 1rem;text-align:center;}
+  .contact-section h2{color:#fff;margin-bottom:0.4rem;}
+  .contact-section p{color:rgba(255,255,255,0.7);font-size:0.8rem;margin-bottom:1rem;}
+  .c-links{display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;}
+  .c-link{display:inline-block;padding:7px 14px;border-radius:7px;background:rgba(255,255,255,0.12);color:#fff;font-size:0.75rem;font-weight:500;border:1px solid rgba(255,255,255,0.25);}
+</style>
+
+<h2 class="sr-only" style="position:absolute;left:-9999px">Portfolio site preview for Samadrita Roy</h2>
+
+<nav>
+  <div class="nav-inner">
+    <span class="nav-logo">Samadrita Roy</span>
+    <div class="nav-links"><a href="#">Projects</a><a href="#">Experience</a><a href="#">Contact</a></div>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-tag">Open to opportunities</div>
+  <h1>Frontend Developer<br>& UX Engineer</h1>
+  <p class="sub">4+ years building enterprise-scale React apps at TCS — shipping accessible, performant UI for 750K+ users across government, aviation, and fintech.</p>
+  <div class="stats">
+    <div class="stat"><div class="num">750K+</div><div class="lbl">Production users</div></div>
+    <div class="stat"><div class="num">5+</div><div class="lbl">Enterprise apps</div></div>
+    <div class="stat"><div class="num">~20%</div><div class="lbl">Performance gains</div></div>
+    <div class="stat"><div class="num">~70%</div><div class="lbl">Faster delivery</div></div>
+  </div>
+  <div class="btns">
+    <span class="btn btn-p">Get in touch</span>
+    <span class="btn btn-o">GitHub</span>
+    <span class="btn btn-o">LinkedIn</span>
+  </div>
+</div>
+
+<section style="background:#f7f7f7;">
+  <div class="sec-label">Technical skills</div>
+  <h2>What I work with</h2>
+  <div class="skills-grid">
+    <div class="skill-card"><h3>Core stack</h3><div class="tags"><span class="tag">React.js</span><span class="tag">TypeScript</span><span class="tag">React Native</span></div></div>
+    <div class="skill-card"><h3>State & data</h3><div class="tags"><span class="tag">Redux</span><span class="tag">GraphQL</span><span class="tag">REST APIs</span></div></div>
+    <div class="skill-card"><h3>UI systems</h3><div class="tags"><span class="tag">Storybook</span><span class="tag">WCAG</span><span class="tag">i18n</span></div></div>
+    <div class="skill-card"><h3>AI & emerging</h3><div class="tags"><span class="tag t">GenAI</span><span class="tag t">LLM</span><span class="tag t">LLaMA3</span></div></div>
+    <div class="skill-card"><h3>Performance</h3><div class="tags"><span class="tag">Lazy loading</span><span class="tag">Optimization</span></div></div>
+    <div class="skill-card"><h3>Process</h3><div class="tags"><span class="tag">Agile</span><span class="tag">Unit testing</span></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-label">Selected work</div>
+  <h2>Key projects</h2>
+  <div class="proj-card">
+    <div style="display:flex;gap:5px;margin-bottom:5px;flex-wrap:wrap;"><span class="badge">Government</span><span class="badge">Nov 2024 – Present</span></div>
+    <h3>DSP Ireland — Pension Platform</h3>
+    <p>Government platform for 750K+ users. Built multilingual CMS-driven UI, introduced i18n from scratch, and building the full React Native mobile app solo.</p>
+    <div class="badges"><span class="badge">React</span><span class="badge">TypeScript</span><span class="badge">GraphQL</span><span class="badge">Strapi CMS</span><span class="badge">React Native</span></div>
+    <div class="impact"><div class="imp"><div class="num">750K+</div><div class="lbl">Active users</div></div><div class="imp"><div class="num">~90%</div><div class="lbl">WCAG score</div></div><div class="imp"><div class="num">⭐×2</div><div class="lbl">Star of the Month</div></div></div>
+  </div>
+  <div class="proj-card teal">
+    <div style="display:flex;gap:5px;margin-bottom:5px;flex-wrap:wrap;"><span class="badge">Education tech</span><span class="badge">Jan–Sep 2024</span></div>
+    <h3>Dibber — Education Platform (600+ schools, 9 countries)</h3>
+    <p>Led frontend, built Storybook component library, Redux state, pixel-perfect UI. Recognized by Global Head of TCS Interactive.</p>
+    <div class="badges"><span class="badge">React</span><span class="badge">Redux</span><span class="badge">Storybook</span></div>
+    <div class="impact"><div class="imp"><div class="num">600+</div><div class="lbl">Schools</div></div><div class="imp"><div class="num">9</div><div class="lbl">Countries</div></div><div class="imp"><div class="num">~70%</div><div class="lbl">Faster delivery</div></div></div>
+  </div>
+</section>
+
+<div class="contact-section">
+  <h2>Let's work together</h2>
+  <p>Actively looking for frontend and UX engineering roles.</p>
+  <div class="c-links">
+    <span class="c-link">✉ r.samadrita3@gmail.com</span>
+    <span class="c-link">LinkedIn</span>
+    <span class="c-link">GitHub</span>
+  </div>
+</div>
