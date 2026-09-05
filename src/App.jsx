@@ -430,7 +430,7 @@ function App() {
           <div className="contact-links">
             <a href="mailto:r.samadrita3@gmail.com" className="contact-link">✉ r.samadrita3@gmail.com</a>
             <a href="tel:+918420567946" className="contact-link">📞 +91-8420567946</a>
-            <a href="https://www.linkedin.com/in/samadrita-roy-975638188/" target="_blank" rel="noreferrer" className="contact-link">LinkedIn ↗</a>
+            <a href="https://rsamadrita.github.io/" target="_blank" rel="noreferrer" className="contact-link">LinkedIn ↗</a>
             <a href="https://github.com/rSamadrita" target="_blank" rel="noreferrer" className="contact-link">GitHub ↗</a>
           </div>
         </div>
