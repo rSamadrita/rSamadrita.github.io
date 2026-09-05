@@ -383,7 +383,7 @@ function App() {
 
             <div className="resume-actions">
               <a
-                href={activeResume === 'react' ? '/Samadrita_Roy_Resume.pdf' : '/Samadrita_Roy_FullStack_Resume.pdf'}
+                href={activeResume === 'react' ? '/Samadrita_Roy_Resume_2026.pdf' : '/Samadrita_Roy_FullStack_Resume_2026.pdf'}
                 className="btn btn-primary"
                 download
               >
