@@ -1,48 +1,48 @@
 import { useMemo, useState } from 'react';
 
 const skillGroups = [
-  { title: 'Mobile development', items: ['React Native', 'iOS & Android', 'Expo', 'React Navigation', 'Deep Linking'] },
-  { title: 'Web / core stack', items: ['React.js', 'TypeScript', 'JavaScript ES6+'] },
-  { title: 'State & data', items: ['Redux', 'GraphQL', 'REST APIs', 'Strapi CMS', 'AsyncStorage'] },
-  { title: 'UI & design systems', items: ['Storybook', 'Component architecture', 'Responsive design', 'WCAG 2.0/2.1'] },
-  { title: 'AI & emerging tech', items: ['Generative AI', 'LLM integration', 'Prompt engineering', 'LLaMA3 / Ollama'], teal: true },
-  { title: 'Tools & process', items: ['Git', 'Xcode', 'Android Studio', 'Agile / Scrum', 'i18n'] },
+  { title: 'Frontend core', items: ['React.js', 'TypeScript', 'JavaScript (ES6+)', 'HTML5', 'CSS3/SCSS'] },
+  { title: 'Mobile development', items: ['React Native', 'iOS & Android', 'Expo', 'React Navigation', 'AsyncStorage'] },
+  { title: 'State & data', items: ['Redux', 'GraphQL', 'REST APIs', 'Strapi CMS', 'Redux Toolkit'] },
+  { title: 'Tools & workflow', items: ['GitHub', 'Git', 'Jira', 'Confluence', 'CI/CD', 'Webpack', 'Storybook'], teal: true },
+  { title: 'Performance & quality', items: ['Jest', 'React Testing Library', 'Lazy Loading', 'Render Optimization', 'WCAG 2.0/2.1'] },
+  { title: 'Emerging tech', items: ['Generative AI', 'Prompt Engineering', 'LLM Integration', 'AI-assisted development tools'], teal: true },
 ];
 
 const projects = [
   {
     category: 'Government',
     period: 'Nov 2024 – Present',
-    title: 'Department of Social Protection (DSP), Ireland — Pension Platform',
+    title: 'DSP Ireland – Government Pension Platform',
     description:
-      'Government pension platform enabling enrollment, opt-in/out workflows, and employer/member portals for 750K+ users. Sole developer on the complete React Native mobile app (iOS + Android), plus built multilingual CMS-driven web UI with i18n from scratch.',
-    badges: ['React', 'React Native', 'TypeScript', 'GraphQL', 'Strapi CMS', 'i18n'],
+      'Delivered enrollment and opt-in / opt-out flows for a pension platform serving 750K+ users, building multilingual API-driven UI with 60–70+ GraphQL endpoints and WCAG 2.1 AA compliance.',
+    badges: ['React', 'TypeScript', 'GraphQL', 'React Native', 'Strapi CMS'],
     stats: [
       { value: '750K+', label: 'Active users' },
-      { value: '~90%', label: 'WCAG audit score' },
-      { value: '⭐ ×2', label: 'Star of the Month' },
+      { value: '~90%', label: 'Accessibility score' },
+      { value: '2x', label: 'Star of the Month' },
     ],
   },
   {
     category: 'Education tech',
     period: 'Jan 2024 – Sep 2024',
-    title: 'Dibber — Back-office Education Platform',
+    title: 'Dibber Education Platform (Norway)',
     description:
-      'Led frontend development for a platform used across 600+ schools in 9 countries. Built a Storybook-based component library, Redux state architecture, and pixel-perfect responsive UI — recognized by the Global Head of TCS Interactive.',
+      'Led frontend development for a back-office platform across 600+ schools in 9 countries, maintaining a Storybook library of 40+ reusable components and improving performance by ~60%.',
     badges: ['React', 'Redux', 'Storybook', 'WCAG 2.0'],
     stats: [
       { value: '600+', label: 'Schools' },
       { value: '9', label: 'Countries' },
-      { value: '~70%', label: 'Faster delivery' },
+      { value: '~60%', label: 'Performance gain' },
     ],
     teal: true,
   },
   {
     category: 'Fintech / Aviation',
     period: 'Feb 2022 – Nov 2024',
-    title: 'OMSA / Air India Express / Standard Bank — Enterprise Platforms',
+    title: 'OMSA, Air India Express & Standard Bank',
     description:
-      'Delivered frontend solutions across insurance (OMSA), airline booking (Air India Express), and banking (Standard Bank) — building API-driven UI systems, booking workflows, and reusable components across cross-domain enterprise systems.',
+      'Delivered frontend solutions across insurance, airline booking, and banking platforms, creating 30+ reusable React components and API-driven responsive UI modules.',
     badges: ['React', 'TypeScript', 'REST APIs'],
     stats: [],
   },
@@ -50,127 +50,126 @@ const projects = [
 
 const resumeData = {
   react: {
-    title: 'Frontend Developer & UX Engineer',
-    contact: '+91-8420567946 · r.samadrita3@gmail.com · LinkedIn · GitHub · rsamadrita.github.io',
+    title: 'Frontend Engineer',
+    contact: 'Pune, India | 8420567946 | r.samadrita3@gmail.com | linkedin.com/in/samadrita-roy-975638188 | github.com/rSamadrita',
     summary:
-      'Frontend Developer and UX Engineer with 4+ years building enterprise-scale web and mobile applications at Tata Consultancy Services across government, aviation, and fintech domains. Proven record shipping high-fidelity, accessible UI systems (WCAG ~90%) for 750K+ users — with measurable impact on performance (~20% gains), developer velocity (~70% faster delivery), and cross-platform responsiveness. Actively expanding into Generative AI and LLM-powered frontend experiences, with hands-on prototyping using LLaMA3 and React.',
+      'Frontend Engineer with 4+ years of experience designing, developing and maintaining scalable, responsive web applications using React.js, TypeScript and JavaScript (ES6+) across aviation, fintech, education and government domains. Strong hands-on expertise in React component-based architecture, GraphQL and REST API integration, GitHub-based version control, and CI/CD pipelines, combined with solid grounding in Agile/SAFe delivery, unit testing (Jest), code reviews, and SDLC best practices. Delivered measurable impact through ~70% faster development cycles via reusable component design, ~20% performance improvement, and ~90% WCAG 2.0/2.1 accessibility audit scores on production systems serving 750K+ users. Working knowledge of AI-assisted development tools and responsible AI usage in modern software engineering.',
     skills: [
-      ['Languages & Frameworks:', 'JavaScript (ES6+), TypeScript, React.js, React Native'],
-      ['UI / Prototyping:', 'Responsive Design, Pixel-Perfect UI, Component Architecture, Storybook, Motion-aware UI Patterns'],
-      ['State & Data:', 'Redux, GraphQL, REST APIs, Strapi CMS'],
-      ['AI & Emerging Tech:', 'Generative AI, LLM Integration, Prompt Engineering, LLaMA3, Ollama'],
-      ['Performance & A11y:', 'Lazy Loading, Render Optimization, WCAG 2.0/2.1, Cross-Browser Compatibility'],
-      ['Tools & Process:', 'Git, VS Code, Storybook, Agile/Scrum, Internationalization (i18n)'],
+      ['Languages & Frameworks:', 'JavaScript (ES6+), TypeScript, React.js, React Native, HTML5, CSS3/SCSS'],
+      ['State Management & APIs:', 'Redux, GraphQL, REST APIs'],
+      ['Version Control & Tools:', 'GitHub, Git, Visual Studio Code, Jira, Confluence, Webpack, Storybook, CI/CD'],
+      ['Testing & Quality:', 'Jest, React Testing Library, Unit Testing, Peer Code Reviews'],
+      ['Architecture:', 'Component-Based Architecture, Modular & Scalable UI Design, Non-Functional Requirements (NFR)'],
+      ['Methodology:', 'Agile/Scrum, SAFe, Software Development Life Cycle (SDLC)'],
+      ['Accessibility & Performance:', 'WCAG 2.0/2.1, Cross-Browser Compatibility, Lazy Loading, Render Optimization, Responsive Design'],
+      ['Emerging Technologies:', 'Generative AI, Prompt Engineering, LLM Integration, AI-Assisted Development Tools'],
     ],
     experience: [
       {
-        role: 'Frontend Developer / UX Engineer',
+        role: 'Frontend Developer (Custom Software Engineer track)',
         date: 'Feb 2022 – Present',
-        company: 'Tata Consultancy Services · Pune, India',
+        company: 'Tata Consultancy Services — Pune, India',
         bullets: [
-          'Engineered 5+ enterprise web and mobile applications across government, aviation, and fintech sectors, collectively serving 750K+ users in production.',
-          'Accelerated team delivery by ~70% through a reusable React component architecture and Storybook-driven design system.',
-          'Boosted application performance by ~20% via lazy loading, render optimization, and efficient GraphQL/REST API consumption patterns.',
-          'Achieved ~90% WCAG 2.0/2.1 audit scores across all products by designing and enforcing accessible UI systems.',
-          'Implemented Internationalization (i18n) and multilingual CMS-driven UI, enabling scalable localization across multiple regions.',
-          'Defined and implemented NFRs (performance, scalability, security, maintainability, accessibility) across all production applications.',
-          'Partnered closely with design, product, and backend engineering in Agile/Scrum teams to ship high-quality features on schedule.',
+          'Designed, developed and maintained 5+ enterprise-scale React.js and TypeScript applications supporting 750K+ users across aviation, fintech, education and government platforms, contributing independently as a subject matter expert (SME) across the SDLC.',
+          'Built reusable, component-based React architecture managed through GitHub version control and CI/CD workflows, accelerating delivery speed by ~70% and improving code maintainability.',
+          'Integrated GraphQL and REST APIs across 20+ production modules, ensuring efficient data flow and predictable state management with Redux.',
+          'Improved application performance by ~20% through lazy loading, render optimization and efficient API consumption; achieved ~90% WCAG 2.0/2.1 accessibility audit scores.',
+          'Collaborated with cross-functional teams of 30+ backend engineers, QA, designers and product stakeholders in Agile/Scrum (SAFe) ceremonies, sprint planning, unit testing and code reviews to deliver high-quality releases.',
+          'Utilized AI-assisted development tools to improve productivity and code quality, following enterprise coding standards and responsible AI usage guidelines.',
         ],
       },
     ],
     projects: [
       {
-        title: 'DSP Ireland – Government Pension Platform (750K+ Users)',
-        stack: 'React, TypeScript, GraphQL, React Native, Strapi CMS, i18n · Nov 2024 – Present',
+        title: 'DSP Ireland – Government Pension Platform',
+        stack: 'React, TypeScript, GraphQL, React Native, Strapi CMS · Nov 2024 – Present',
         bullets: [
-          'Architected dynamic multilingual UI using Strapi CMS with a custom BlocksRenderer rendering fully API-driven content.',
-          'Introduced i18n from the ground up for a 750K+ user base across regional locales.',
-          'Currently building the complete React Native mobile application solo, targeting production release.',
-          'Awarded Star of the Month (×2); recognized by TCS BANCS and TCS Interactive leadership.',
+          'Delivered enrollment and opt-in/opt-out workflows for a government pension platform serving 750K+ users, working with 60–70+ GraphQL API endpoints for structured, efficient data fetching.',
+          'Built a custom BlocksRenderer component enabling dynamic, multilingual, API-driven UI content across 5+ languages; ensured WCAG 2.1 AA compliance and enterprise-grade NFRs.',
+          'Recognized by TCS BANCS and TCS Interactive leadership for platform contributions.',
         ],
       },
       {
-        title: 'Dibber – Education Platform (600+ Schools, 9 Countries)',
+        title: 'Dibber Education Platform (Norway)',
         stack: 'React, Redux, Storybook · Jan 2024 – Sep 2024',
         bullets: [
-          'Led frontend for a platform serving 600+ schools across 9 countries; built Storybook component library, Redux state management, and WCAG 2.0-compliant UI.',
-          'Received direct client appreciation and recognition from the Global Head of TCS Interactive.',
+          'Led frontend development for a back-office platform used across 600+ schools in 9 countries; built and maintained a Storybook-based component library of 40+ reusable components.',
+          'Improved application performance by ~60% through lazy loading and render optimization; applied WCAG 2.0 accessibility standards.',
+          'Received direct client appreciation and recognition from Global Head, TCS Interactive.',
         ],
       },
       {
-        title: 'OMSA / Air India Express / Standard Bank',
+        title: 'OMSA, Air India Express & Standard Bank – Enterprise Platforms',
         stack: 'React, TypeScript, REST APIs · Feb 2022 – Nov 2024',
-        bullets: ['Shipped API-driven UI systems, booking workflows, and reusable components across insurance, airline, and banking platforms.'],
+        bullets: ['Delivered frontend solutions across insurance, airline booking and banking platforms; built 30+ reusable React components and API-driven, pixel-perfect responsive UI modules.'],
       },
     ],
     awards: [
-      'Star of the Month (×2) — TCS, for high-impact delivery on DSP Ireland government platform',
-      'Recognized by Global Head of TCS Interactive for outstanding contributions on Dibber (9-country education platform)',
-      'Appreciated by TCS BANCS and TCS Interactive leadership for enterprise-scale frontend delivery',
+      'Recognized by Global Head, TCS Interactive, for contributions to the Dibber platform (600+ schools, 9 countries).',
+      'Awarded “Star of the Month” (2x) on the DSP project; appreciated by TCS BANCS and TCS Interactive leadership for enterprise-scale delivery across 5+ production applications serving 750K+ users.',
     ],
-    education: 'M.Sc. in Electronic Science — Calcutta University · Aug 2018 – Oct 2020',
+    education: 'M.Sc. in Electronic Science — Calcutta University, India | Aug 2018 – Oct 2020',
   },
   rn: {
-    title: 'React Native Developer | Mobile & Frontend Engineer',
-    contact: '+91-8420567946 · r.samadrita3@gmail.com · LinkedIn · GitHub',
+    title: 'Full Stack Developer (MERN) • React Native • React.js',
+    contact: 'Pune, India | 8420567946 | r.samadrita3@gmail.com | linkedin.com/in/samadrita-roy-975638188 | github.com/rSamadrita',
     summary:
-      'React Native Developer with 4+ years of experience at Tata Consultancy Services, delivering enterprise-scale mobile and web applications across aviation, fintech, and government domains. Specialized in React Native, React.js, TypeScript, and cross-platform mobile development with hands-on expertise in iOS/Android app architecture, offline-first patterns, native module integration, and performance optimization. Proven impact delivering production mobile apps supporting 750K+ users, with strong focus on WCAG accessibility, scalable component architecture, and NFRs. Actively expanding into Generative AI and LLM-powered mobile applications.',
+      'Full Stack Developer with 4+ years of experience at Tata Consultancy Services, primarily specializing in React.js and React Native, with growing hands-on experience across the MERN stack (MongoDB, Express.js, React, Node.js). Delivered enterprise-scale web and cross-platform mobile applications (iOS/Android) across aviation, fintech, education and government domains, supporting 750K+ production users. Core strengths in React component-based architecture, GraphQL/REST API integration, state management (Redux), and mobile app architecture, complemented by hands-on backend experience building REST API endpoints (CRUD operations) using Node.js and Express.js, with working knowledge of MongoDB. Strong grounding in Agile/Scrum delivery, GitHub-based version control, CI/CD, unit testing (Jest), and SDLC best practices, with working knowledge of AI-assisted development tools.',
     skills: [
-      ['Mobile Development:', 'React Native (iOS & Android), Expo, React Navigation, Deep Linking, Push Notifications'],
-      ['Languages & Frameworks:', 'JavaScript (ES6+), TypeScript, React.js'],
-      ['State Management & Data:', 'Redux, Redux Toolkit, GraphQL, REST APIs, AsyncStorage, Offline-First Patterns'],
-      ['Mobile Architecture:', 'Cross-Platform Component Architecture, Native Module Integration, Performance Optimization'],
-      ['UI/UX & Accessibility:', 'Responsive Mobile UI, Pixel-Perfect Design, WCAG 2.0/2.1, Cross-Device Compatibility'],
-      ['Testing & Tooling:', 'Unit Testing, Detox (E2E), Storybook, Git, Strapi CMS, Xcode, Android Studio'],
-      ['Emerging:', 'Generative AI, Prompt Engineering, LLM Integration'],
+      ['Frontend:', 'React.js, React Native (iOS & Android), TypeScript, JavaScript (ES6+), HTML5, CSS3/SCSS, Redux, Redux Toolkit'],
+      ['Backend (Growing):', 'Node.js, Express.js, REST API Development (CRUD), MongoDB (working knowledge)'],
+      ['Mobile:', 'Expo, React Navigation, AsyncStorage, Offline-First Patterns, Push Notifications, Deep Linking'],
+      ['Data & APIs:', 'GraphQL, REST APIs'],
+      ['Version Control & Tools:', 'GitHub, Git, Visual Studio Code, Xcode, Android Studio, Jira, Confluence, Webpack, Storybook, CI/CD, Strapi CMS'],
+      ['Testing & Quality:', 'Jest, Detox (E2E), React Testing Library, Unit Testing, Peer Code Reviews'],
+      ['Architecture:', 'Component-Based Architecture, Cross-Platform Architecture, Modular & Scalable UI Design, Non-Functional Requirements (NFR)'],
+      ['Methodology:', 'Agile/Scrum, SAFe, Software Development Life Cycle (SDLC)'],
+      ['Accessibility & Performance:', 'WCAG 2.0/2.1, Cross-Browser/Cross-Device Compatibility, Lazy Loading, Render Optimization, Responsive Design'],
+      ['Emerging Technologies:', 'Generative AI, Prompt Engineering, LLM Integration, AI-Assisted Development Tools'],
     ],
     experience: [
       {
-        role: 'React Native Developer / Frontend Developer',
+        role: 'React.js / React Native Developer (Full Stack exposure)',
         date: 'Feb 2022 – Present',
-        company: 'Tata Consultancy Services · Pune, India',
+        company: 'Tata Consultancy Services — Pune, India',
         bullets: [
-          'Engineered and delivered 5+ enterprise-grade mobile and web applications across aviation, fintech, and government sectors, supporting 750K+ users in production.',
-          'Currently building a complete React Native mobile application single-handedly for DSP Ireland, covering iOS and Android from architecture to deployment.',
-          'Improved application performance by ~20% through lazy loading, FlatList optimization, optimized rendering strategies, and efficient API consumption patterns.',
-          'Designed and implemented reusable React Native and React component architecture, accelerating development speed by ~70%.',
-          'Built scalable mobile and frontend systems using TypeScript, Redux, and GraphQL, ensuring predictable state management and efficient data flow.',
-          'Developed WCAG-compliant accessible UI systems for mobile and web, achieving ~90% audit scores including screen reader support.',
-          'Implemented cross-platform responsive UIs ensuring consistent UX across iOS, Android, and web browsers for global users.',
+          'Designed, developed and maintained 5+ enterprise-scale React.js and React Native applications supporting 750K+ users across aviation, fintech, education and government platforms, contributing independently as a subject matter expert (SME) across the SDLC.',
+          'Contributed to backend REST API development using Node.js and Express.js, building and consuming CRUD endpoints to support frontend and mobile features, and gaining working exposure to MongoDB as part of full-stack enablement.',
+          'Built reusable, component-based React and React Native architecture managed through GitHub version control and CI/CD workflows, accelerating delivery speed by ~70% and improving code maintainability.',
+          'Integrated GraphQL and REST APIs across 20+ production modules, ensuring efficient data flow and predictable state management with Redux.',
+          'Improved application performance by ~20% through lazy loading, render optimization, FlatList optimization, and efficient API consumption; achieved ~90% WCAG 2.0/2.1 accessibility audit scores.',
+          'Collaborated with cross-functional teams of 30+ backend engineers, QA, designers and product stakeholders in Agile/Scrum ceremonies, sprint planning, unit testing and code reviews to deliver high-quality releases.',
         ],
       },
     ],
     projects: [
       {
-        title: 'DSP Ireland – Pension Platform (Mobile + Web)',
-        stack: 'React Native, React, TypeScript, GraphQL, Strapi CMS, i18n · Nov 2024 – Present',
+        title: 'DSP Ireland – Government Pension Platform (Mobile + Web)',
+        stack: 'React, React Native, TypeScript, GraphQL, Node.js, Express.js, Strapi CMS · Nov 2024 – Present',
         bullets: [
-          'Sole developer architecting and building the complete React Native mobile app for a 750K+ user government pension platform — covering enrollment, opt-in/out, and employer/member portal flows.',
-          'Designed mobile-first component architecture with React Navigation, deep linking support, and mobile-specific i18n locale handling.',
-          'Built dynamic multilingual UI using Strapi CMS with a custom BlocksRenderer for API-driven content on both mobile and web.',
-          'Recognized by TCS BANCS and TCS Interactive leadership; awarded Star of the Month (×2).',
+          'Sole developer architecting and building the React Native mobile application (iOS & Android) for a government pension platform serving 750K+ users, covering enrollment and opt-in/opt-out workflows; built REST API endpoints using Node.js and Express.js and worked with 60–70+ GraphQL endpoints for data fetching.',
+          'Built a custom BlocksRenderer component for dynamic, multilingual, API-driven UI content across 5+ languages via Strapi CMS; ensured WCAG 2.1 AA compliance; recognized by TCS BANCS and TCS Interactive leadership for contributions.',
         ],
       },
       {
-        title: 'Dibber – Education Platform (Norway)',
+        title: 'Dibber Education Platform (Norway)',
         stack: 'React, Redux, Storybook · Jan 2024 – Sep 2024',
         bullets: [
-          'Led frontend for 600+ schools across 9 countries; built Storybook component library and Redux state architecture — patterns directly transferable to React Native development.',
-          'Recognized by Global Head of TCS Interactive for outstanding contributions.',
+          'Led frontend development for a back-office platform used across 600+ schools in 9 countries; built and maintained a Storybook-based component library of 40+ reusable components.',
+          'Implemented Redux-based state management patterns directly transferable to React Native/full-stack state architecture; applied WCAG 2.0 accessibility standards.',
+          'Received direct client appreciation and recognition from Global Head, TCS Interactive.',
         ],
       },
       {
-        title: 'OMSA / Air India Express / Standard Bank',
+        title: 'OMSA, Air India Express & Standard Bank – Enterprise Platforms',
         stack: 'React, TypeScript, REST APIs · Feb 2022 – Nov 2024',
-        bullets: ['Delivered API-driven UI systems, booking workflows, and responsive interfaces across insurance, aviation, and banking enterprise platforms.'],
+        bullets: ['Delivered frontend solutions across insurance, airline booking and banking platforms; built 30+ reusable React components and API-driven, pixel-perfect responsive UI modules.'],
       },
     ],
     awards: [
-      'Recognized by Global Head of TCS Interactive for outstanding contributions on Dibber platform (Norway)',
-      'Awarded "Star of the Month" (×2) for high-impact delivery on DSP Ireland government project',
-      'Sole React Native developer on a 750K+ user government platform — from architecture to production release',
+      'Sole React Native developer on a 750K+ user government platform (architecture to production); recognized by Global Head, TCS Interactive, for Dibber platform contributions (600+ schools, 9 countries); awarded “Star of the Month” (2x) on the DSP project.',
     ],
-    education: 'M.Sc. in Electronic Science — Calcutta University · Aug 2018 – Oct 2020',
+    education: 'M.Sc. in Electronic Science — Calcutta University, India | Aug 2018 – Oct 2020',
   },
 };
 
@@ -195,9 +194,11 @@ function App() {
       <header id="hero" className="section hero-section">
         <div className="inner">
           <div className="hero-tag">Open to opportunities</div>
-          <h1>Frontend Developer<br />& UX Engineer</h1>
+          <h1>{activeResume === 'react' ? 'Frontend Engineer' : 'Full Stack Developer'}</h1>
           <p className="tagline">
-            4+ years building enterprise-scale React and React Native applications at Tata Consultancy Services — shipping accessible, performant UI for 750K+ users across government, aviation, and fintech domains.
+            {activeResume === 'react'
+              ? 'Frontend Engineer with 4+ years building scalable, responsive React.js and TypeScript applications across aviation, fintech, education and government domains.'
+              : 'Full Stack Developer with 4+ years specialising in React.js, React Native and MERN stack delivery across enterprise web and mobile products.'}
           </p>
           <div className="hero-stats">
             <div className="stat-box">
@@ -210,11 +211,11 @@ function App() {
             </div>
             <div className="stat-box">
               <div className="num">~20%</div>
-              <div className="label">Performance improvement</div>
+              <div className="label">Performance uplift</div>
             </div>
             <div className="stat-box">
               <div className="num">~70%</div>
-              <div className="label">Faster delivery via component libraries</div>
+              <div className="label">Faster delivery</div>
             </div>
           </div>
           <div className="hero-actions">
@@ -308,8 +309,8 @@ function App() {
           <h2>Download or view my resume</h2>
 
           <div className="resume-tabs">
-            <button className={`resume-tab ${activeResume === 'react' ? 'active' : ''}`} onClick={() => setActiveResume('react')}>React / UX Engineer</button>
-            <button className={`resume-tab ${activeResume === 'rn' ? 'active' : ''}`} onClick={() => setActiveResume('rn')}>React Native</button>
+            <button className={`resume-tab ${activeResume === 'react' ? 'active' : ''}`} onClick={() => setActiveResume('react')}>Frontend Engineer</button>
+            <button className={`resume-tab ${activeResume === 'rn' ? 'active' : ''}`} onClick={() => setActiveResume('rn')}>Full Stack Developer</button>
           </div>
 
           <div className="resume-panel active">
@@ -386,10 +387,10 @@ function App() {
                 className="btn btn-primary"
                 download
               >
-                ⬇ Download ({activeResume === 'react' ? 'React / UX Engineer' : 'React Native'})
+                ⬇ Download ({activeResume === 'react' ? 'Frontend Engineer' : 'Full Stack Developer'})
               </a>
             </div>
-            <div className="download-note">Right-click → Save link as if the download doesn't start automatically.</div>
+            <div className="download-note">Right-click → Save link as if the download doesn’t start automatically.</div>
           </div>
         </div>
       </section>
@@ -401,14 +402,14 @@ function App() {
           <div className="timeline">
             <div className="tl-item">
               <div className="tl-date">Feb 2022 – Present</div>
-              <h3>React Native Developer / Frontend Developer / UX Engineer</h3>
+              <h3>Frontend Engineer / React.js & React Native Developer</h3>
               <div className="tl-company">Tata Consultancy Services · Pune, India</div>
               <ul className="tl-bullets">
-                <li>Engineered 5+ enterprise web and mobile apps across government, aviation, and fintech — serving 750K+ users</li>
-                <li>Reduced development time by ~70% through reusable React component architecture and Storybook design systems</li>
-                <li>Improved application performance by ~20% via lazy loading, FlatList optimization, and render optimization</li>
-                <li>Achieved ~90% WCAG 2.0/2.1 audit scores across all production products</li>
-                <li>Currently building a complete React Native mobile app solo for DSP Ireland (iOS + Android)</li>
+                <li>Designed and maintained 5+ enterprise-scale React.js and TypeScript applications supporting 750K+ users across aviation, fintech, education, and government platforms.</li>
+                <li>Built reusable component systems and GitHub-driven CI/CD workflows, improving delivery speed by ~70% and maintainability.</li>
+                <li>Integrated GraphQL and REST APIs across 20+ production modules, while improving performance by ~20% through lazy loading and render optimization.</li>
+                <li>Achieved ~90% WCAG 2.0/2.1 audit scores and delivered responsive cross-browser UI across production products.</li>
+                <li>Worked on full-stack exposure using Node.js, Express.js, and MongoDB while building and consuming production APIs.</li>
               </ul>
             </div>
           </div>
@@ -416,7 +417,7 @@ function App() {
             <div className="section-label">Education</div>
             <div className="education-row">
               <strong>M.Sc. in Electronic Science</strong>
-              <div>Calcutta University · 2018 – 2020</div>
+              <div>Calcutta University, India · Aug 2018 – Oct 2020</div>
             </div>
           </div>
         </div>
@@ -424,8 +425,8 @@ function App() {
 
       <section id="contact" className="section contact-section">
         <div className="inner">
-          <h2>Let's work together</h2>
-          <p className="tagline white">I'm actively looking for frontend, mobile, and UX engineering roles where I can build impactful, accessible products at scale.</p>
+          <h2>Let’s work together</h2>
+          <p className="tagline white">I’m actively looking for frontend, full-stack, and cross-platform engineering opportunities where I can deliver accessible, high-impact digital products at scale.</p>
           <div className="contact-links">
             <a href="mailto:r.samadrita3@gmail.com" className="contact-link">✉ r.samadrita3@gmail.com</a>
             <a href="tel:+918420567946" className="contact-link">📞 +91-8420567946</a>
